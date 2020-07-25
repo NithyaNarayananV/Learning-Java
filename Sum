@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class sum
+{
+	public static void main(String [] args)
+	{
+
+		Scanner input = new Scanner (System.in);
+		System.out.print("Enter value for A: ");
+		int a = input.nextInt();
+		System.out.print("Enter value for B: ");
+		int b = input.nextInt();
+		int c;
+		c=a+b;
+		System.out.print("The sum of "+a+" + "+b+" = "+c);
+	}
+}
+
+/* OUTPUT
+Enter value for A: 45
+Enter value for B: 92
+The sum of 45 + 92 = 137
+*/
