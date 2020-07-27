@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Product
+{
+	public static void main(String [] args)
+	{
+
+		Scanner input = new Scanner (System.in);
+		System.out.print("Program in JAVA to Multiply 2 given Values\n");
+		System.out.print("Enter value for A: ");
+		int a = input.nextInt();
+		System.out.print("Enter value for B: ");
+		int b = input.nextInt();
+		int c;
+		c=a*b;
+		System.out.print("The product of "+a+" X "+b+" = "+c);
+	}
+}
+
+
+
+/*
+OUTPUT
+Program in JAVA to Multiply 2 given Values
+Enter value for A: 5
+Enter value for B: 5
+The product of 5 X 5 = 25
+*/
