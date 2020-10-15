@@ -14,33 +14,20 @@ class A extends JFrame
 {
     JTextField t1,t2;
     JButton b,add,sub,div,mul;
-    JLabel Result;
+    JLabel Result,Title;
     public A()
     {
-        
-        
-        Result = new JLabel();//" Hello Nithya Narayanan");
-        //l2 = new JLabel(" Welcome Nishanth ");
-        
-        t1 = new JTextField(20);
-        t2 = new JTextField(20);
+        Result = new JLabel();
+        Title = new JLabel("Calculator \n by Nithya Narayanan\n");
 
-        //b = new JButton("Enter");
+        t1 = new JTextField(5);
+        t2 = new JTextField(5);
+
         add = new JButton("ADD");
         sub = new JButton("SUB");
         div = new JButton("DIV");
         mul = new JButton("MUL");
 
-        /*b.addActionListener(new ActionListener()
-        {
-            public void actionPerformed(ActionEvent ae)
-            {
-                int num1 = Integer.parseInt(t1.getText());
-                int num2 = Integer.parseInt(t2.getText());
-                int value = num1 + num2;
-                Result.setText(value+"");        
-            }
-        });  */
         add.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent ae)
@@ -85,10 +72,10 @@ class A extends JFrame
             }
         });
 
+        add(Title);
         add(t1);
         add(t2);
 
-        //add(b);
         add(add);
         add(mul);
         add(sub);
