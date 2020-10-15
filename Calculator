@@ -1,0 +1,106 @@
+import javax.swing.*;
+import java.awt.event.*;  
+import java.awt.FlowLayout;
+
+public class Calculator 
+{
+    public static void main(String[] args)
+    {
+        A obj = new A();
+    }
+    
+}
+class A extends JFrame
+{
+    JTextField t1,t2;
+    JButton b,add,sub,div,mul;
+    JLabel Result;
+    public A()
+    {
+        
+        
+        Result = new JLabel();//" Hello Nithya Narayanan");
+        //l2 = new JLabel(" Welcome Nishanth ");
+        
+        t1 = new JTextField(20);
+        t2 = new JTextField(20);
+
+        //b = new JButton("Enter");
+        add = new JButton("ADD");
+        sub = new JButton("SUB");
+        div = new JButton("DIV");
+        mul = new JButton("MUL");
+
+        /*b.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent ae)
+            {
+                int num1 = Integer.parseInt(t1.getText());
+                int num2 = Integer.parseInt(t2.getText());
+                int value = num1 + num2;
+                Result.setText(value+"");        
+            }
+        });  */
+        add.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent ae)
+            {
+                int num1 = Integer.parseInt(t1.getText());
+                int num2 = Integer.parseInt(t2.getText());
+                int value = num1 + num2;
+                Result.setText(value+"");
+            }
+        });
+        
+        sub.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent ae)
+            {
+                int num1 = Integer.parseInt(t1.getText());
+                int num2 = Integer.parseInt(t2.getText());
+                int value = num1 - num2;
+                Result.setText(value+"");
+            }
+        });
+        
+        div.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent ae)
+            {
+                int num1 = Integer.parseInt(t1.getText());
+                int num2 = Integer.parseInt(t2.getText());
+                int value = num1 / num2;
+                Result.setText(value+"");
+            }
+        });
+        
+        mul.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent ae)
+            {
+                int num1 = Integer.parseInt(t1.getText());
+                int num2 = Integer.parseInt(t2.getText());
+                int value = num1 * num2;
+                Result.setText(value+"");
+            }
+        });
+
+        add(t1);
+        add(t2);
+
+        //add(b);
+        add(add);
+        add(mul);
+        add(sub);
+        add(div);
+
+        add(Result);
+        
+        setLayout(new FlowLayout());
+
+        setVisible(true);
+        setSize(400,400);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
