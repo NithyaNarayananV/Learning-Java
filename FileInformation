@@ -1,0 +1,43 @@
+//Nithya Narayanan  C VR
+import java.io.*;
+import java.util.*;
+class filedemo
+{
+    public static void main(String args[])
+    {
+        String filename;//'filename' is the variable that stores the filename.
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the file name : ");
+        filename = s.nextLine();
+        File f1 = new File(filename);
+        System.out.println("***********************");
+        System.out.println("   FILE INFORMATION    ");
+        System.out.println("***********************");
+        System.out.println("FILE NAME : "+f1.getName());
+        System.out.println("FILE PATH : "+f1.getPath());
+        System.out.println("PARENT    : "+f1.getParent());
+        
+        if(f1.exists())
+        {
+            System.out.println("    THE FILE EXISTS    ");
+            
+            System.out.println("READABLE FILE : "+f1.canRead());
+            
+            System.out.println("WRITABLE FILE : "+f1.canWrite());
+            
+            System.out.println("DIRECTORY     : "+f1.isDirectory());
+            
+            System.out.println("IT IS A FILE  : "+f1.isFile());
+        
+            Date lastmodified = new Date(f1.lastModified());
+
+            System.out.println("LAST MODIFIED : "+lastmodified );
+
+            System.out.println("FILE LENGTH   : "+f1.length());
+ 
+            //System.out.println("FILE DELETED  "+f1.delete());
+        }    
+        else
+            System.out.println("THE FILE DOES NOT EXISTS ");
+    }
+}
