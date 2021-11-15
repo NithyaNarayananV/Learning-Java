@@ -1,0 +1,32 @@
+public class Program
+{
+    public static void main(String[] args) {
+
+        int input1=6928;
+        int l=0,temp = input1;
+        int x[];   
+        x = new int[10];
+        
+        while(temp!=0)
+        {
+            x[l]=temp%10;
+            temp/=10;
+            l++;
+        }
+        
+        for(int i=l;i>1;i--)
+        {
+            for(int j=0;j<i-1;j++)
+            {
+                x[j]=Math.abs(x[j]-x[j+1]);
+                //System.out.print(x[j]);
+            }
+            //System.out.println("-");
+        }
+
+        System.out.println(x[0]);
+
+        //return x[0];
+
+	}
+}
